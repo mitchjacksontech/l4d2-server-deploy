@@ -11,8 +11,7 @@ yum install -y epel-release
 yum install -y jq
 yum -y install mailx postfix curl wget bzip2 gzip unzip python binutils bc jq tmux glibc.i686 libstdc++ libstdc++.i686
 
-# Open steam ports in firewall,
-# yes, even ssh!
+# Open steam ports in firewall, forbid SSH!
 systemctl enable firewalld
 systemctl start firewalld
 firewall-cmd --zone=public --add-port=27015/tcp
